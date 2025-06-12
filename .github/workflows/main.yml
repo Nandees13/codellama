@@ -7,6 +7,7 @@ on:
 jobs:
   review:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -17,7 +18,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install node-fetch
+        run: npm install
 
       - name: Run CodeLlama Review
         env:
