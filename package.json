@@ -1,0 +1,13 @@
+{
+  "name": "codellama-pr-review",
+  "version": "1.0.0",
+  "description": "Auto review PRs using CodeLlama via GitHub Actions",
+  "main": "review.js",
+  "scripts": {
+    "start": "node review.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "@octokit/core": "^5.0.0"
+  }
+}
