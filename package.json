@@ -1,13 +1,15 @@
 {
-  "name": "codellama-pr-review",
+  "name": "codellama-review-bot",
   "version": "1.0.0",
-  "description": "Auto review PRs using CodeLlama via GitHub Actions",
+  "description": "Automated GitHub PR review using CodeLLaMA and Hugging Face Inference API",
   "main": "review.js",
   "scripts": {
     "start": "node review.js"
   },
   "dependencies": {
-    "node-fetch": "^2.6.7",
-    "@octokit/core": "^5.0.0"
-  }
+    "@octokit/core": "^5.1.0",
+    "node-fetch": "^2.6.9"
+  },
+  "type": "commonjs",
+  "license": "MIT"
 }
