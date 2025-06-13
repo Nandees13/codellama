@@ -32,7 +32,7 @@ async function getPRDiff() {
 
 // Call HuggingFace Inference API (Code LLaMA)
 async function getCodeReviewFromLlama(diff) {
-  const response = await fetch("https://api-inference.huggingface.co/models/codellama/CodeLlama-7b-Instruct-hf", {
+  const response = await fetch("https://api-inference.huggingface.co/models/meta-llama/Llama-3.1-8B-Instruct", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${HF_TOKEN}`,
