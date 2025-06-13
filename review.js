@@ -39,7 +39,13 @@ async function getCodeReviewFromLlama(diff) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      inputs: `Review the following GitHub pull request diff:\n\n${diff}\n\nGive concise feedback in bullet points.`,
+      inputs: `Summarize the following GitHub pull request in a professional tone. Provide:
+
+1. **PR Title** – Suggest a concise and meaningful title for this change.
+2. **Author Name** – If not available, state "Unknown".
+3. **Key Comments** – Mention any significant reason behind the change, issues addressed, or observations of duplication/conflict.
+4. **Diff Summary** – List the files and lines changed, highlighting important code additions or removals.
+5. **Final Summary** – A clear explanation of what the pull request accomplishes or introduces. diff:\n\n${diff}\n\nGive concise feedback in bullet points.`,
     }),
   });
 
